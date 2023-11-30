@@ -322,37 +322,44 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnos
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
-vim.keymap.set('n', '<C-u>', '<C-u>zz', {})
-vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Scroll half screen up with stablization' })
+vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Scroll half screen down with stabilization' })
 
-vim.keymap.set('n', '<C-s>', ':update<cr>')
-vim.keymap.set('i', '<C-s>', '<Esc>:update<cr>gi')
+vim.keymap.set('n', '<C-s>', ':update<cr>', { desc = 'A bit more convenient save file' })
+vim.keymap.set('i', '<C-s>', '<Esc>:update<cr>gi', { desc = 'A bit more convenient save file' })
 
-vim.keymap.set('n', '<leader>f', 'gg=G\'\'')
+vim.keymap.set('n', '<leader>f', 'gg=G\'\'', { desc = 'Autoindent whole [F]ile' })
 
-vim.keymap.set('i', '<A-k>', '<C-o>gk')
-vim.keymap.set('i', '<A-h>', '<Left>')
-vim.keymap.set('i', '<A-l>', '<Right>')
-vim.keymap.set('i', '<A-j>', '<C-o>gj')
+vim.keymap.set('i', '<A-k>', '<C-o>gk', { desc = 'Navigation up in insert mode' })
+vim.keymap.set('i', '<A-h>', '<Left>', { desc = 'Navigation left in insert mode' })
+vim.keymap.set('i', '<A-l>', '<Right>', { desc = 'Navigation right in insert mode' })
+vim.keymap.set('i', '<A-j>', '<C-o>gj', { desc = 'Navigation down in insert mode' })
+vim.keymap.set('i', '<A-b>', '<C-o>gb', { desc = 'Navigation back word in insert mode' })
+vim.keymap.set('i', '<A-w>', '<C-o>gw', { desc = 'Navigation forward word in insert mode' })
+
 
 -- Open compiler
-vim.keymap.set('n', '<F5>', "<cmd>CompilerOpen<cr>", {
+vim.keymap.set('n', '<F5>', ":update<cr><cmd>CompilerOpen<cr>", {
   noremap = true, silent = true,
+  desc = 'Open comiler plugin menu',
 })
 
 vim.keymap.set('n', '<F6>', "<cmd>CompilerStop<cr>", {
   noremap = true, silent = true,
+  desc = 'Stop compiler and hault execution'
 })
 
 -- Redo last selected option
 vim.keymap.set('n', '<S-F5>',
-  "<cmd>CompilerStop<cr>" -- (Optional, to dispose all tasks before redo)
-  .. "<cmd>CompilerRedo<cr>",
-  { noremap = true, silent = true })
+  ":update<cr><cmd>CompilerStop<cr><cmd>CompilerRedo<cr>", {
+    noremap = true, silent = true,
+    desc = 'Save file and rerun last selected option'
+  })
 
 -- Toggle compiler results
 vim.keymap.set('n', '<S-F7>', "<cmd>CompilerToggleResults<cr>", {
-  noremap = true, silent = true
+  noremap = true, silent = true,
+  desc = 'Close results window'
 })
 
 
