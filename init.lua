@@ -322,6 +322,8 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open float
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-s>', ':update<cr>')
+vim.keymap.set('i', '<C-s>', '<Esc>:update<cr>gi')
 
 -- Open compiler
 vim.keymap.set('n', '<F5>', "<cmd>CompilerOpen<cr>", {
