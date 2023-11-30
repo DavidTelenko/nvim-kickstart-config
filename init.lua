@@ -318,12 +318,22 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
+
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
-vim.keymap.set('n', '<C-u>', '<C-u>zz')
+
+vim.keymap.set('n', '<C-u>', '<C-u>zz', {})
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
+
 vim.keymap.set('n', '<C-s>', ':update<cr>')
 vim.keymap.set('i', '<C-s>', '<Esc>:update<cr>gi')
+
+vim.keymap.set('n', '<leader>f', 'gg=G\'\'')
+
+vim.keymap.set('i', '<A-k>', '<C-o>gk')
+vim.keymap.set('i', '<A-h>', '<Left>')
+vim.keymap.set('i', '<A-l>', '<Right>')
+vim.keymap.set('i', '<A-j>', '<C-o>gj')
 
 -- Open compiler
 vim.keymap.set('n', '<F5>', "<cmd>CompilerOpen<cr>", {
@@ -336,9 +346,9 @@ vim.keymap.set('n', '<F6>', "<cmd>CompilerStop<cr>", {
 
 -- Redo last selected option
 vim.keymap.set('n', '<S-F5>',
-     "<cmd>CompilerStop<cr>" -- (Optional, to dispose all tasks before redo)
+  "<cmd>CompilerStop<cr>" -- (Optional, to dispose all tasks before redo)
   .. "<cmd>CompilerRedo<cr>",
- { noremap = true, silent = true })
+  { noremap = true, silent = true })
 
 -- Toggle compiler results
 vim.keymap.set('n', '<S-F7>', "<cmd>CompilerToggleResults<cr>", {
