@@ -1,3 +1,7 @@
+# my-kickstart-config
+
+This is my personal repo for backing up my current config of neovim. It's based on a [kikstarter-modular](https://github.com/dam9000/kickstart-modular.nvim) repo, but started from default repo (I just refactored it myself, following the example of modular one). I really appreciate the work of team behing kickstarter. Videos of [The Primeagen](https://github.com/ThePrimeagen) and [TJ](https://github.com/tjdevries) really inspired and pushed me towards learning vim and tinkering with all of it's potential. 
+
 # kickstart.nvim
 
 https://github.com/kdheepak/kickstart.nvim/assets/1813121/f3ff9a2b-c31f-44df-a4fa-8a0d7b17cf7b
