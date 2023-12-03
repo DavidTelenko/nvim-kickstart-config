@@ -30,10 +30,12 @@ vim.keymap.set('i', '<A-j>', '<C-o>gj', { desc = 'Navigation down in insert mode
 vim.keymap.set('i', '<A-b>', '<C-o>b', { desc = 'Navigation back word in insert mode' })
 vim.keymap.set('i', '<A-w>', '<C-o>w', { desc = 'Navigation forward word in insert mode' })
 
+vim.keymap.set('i', '<C-H>', '<Esc>xdbi', { desc = 'Ctrl + Backspace \"default\" behavior' })
+
 vim.keymap.set({ 'x', 'n' }, '<leader>tu', ':Translate UK<cr>', { desc = 'Translate to Ukrainian' })
 vim.keymap.set({ 'x', 'n' }, '<leader>te', ':Translate EN<cr>', { desc = 'Translate to English' })
 
-require('which-key').register({
-  ['<leader>t'] = "[T]ranslate",
-}, { mode = { 'x', 'n' } })
+vim.keymap.set('n', '<leader>o', ':luafile %<cr>', { desc = 'Source file' })
+
+require('which-key').register({ ['<leader>t'] = "[T]ranslate" }, { mode = { 'x', 'n' } })
 -- vim: ts=2 sts=2 sw=2 et

@@ -17,7 +17,7 @@ vim.o.mouse = 'a'
 --  See `:help 'clipboard'`
 vim.o.clipboard = 'unnamedplus'
 
-vim.o.colorcolumn = "80"
+vim.o.colorcolumn = '80'
 vim.o.scrolloff = 8
 
 -- Enable break indent
@@ -47,4 +47,9 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
+vim.o.list = true
+-- vim.o.listchars = vim.o.listchars or ''
+vim.o.listchars = 'space:🞄'
+
+-- vim.o.guicursor = "n-v-c-sm:block-nCursor,i-ci:ver20blinkwait500-blinkon400-blinkoff150"
 -- vim: ts=2 sts=2 sw=2 et
