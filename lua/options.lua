@@ -48,8 +48,11 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 
 vim.o.list = true
--- vim.o.listchars = vim.o.listchars or ''
-vim.o.listchars = 'space:🞄'
+vim.o.listchars = "tab:> ,trail:🞄,nbsp:+,space:🞄"
 
--- vim.o.guicursor = "n-v-c-sm:block-nCursor,i-ci:ver20blinkwait500-blinkon400-blinkoff150"
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
+
 -- vim: ts=2 sts=2 sw=2 et
