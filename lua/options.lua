@@ -54,8 +54,11 @@ vim.o.tabstop = 4
 vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
+vim.o.smarttab = true
 
 vim.o.spell = true
 vim.o.spelllang = "en"
+
+vim.o.wrap = false
 
 -- vim: ts=2 sts=2 sw=2 et
