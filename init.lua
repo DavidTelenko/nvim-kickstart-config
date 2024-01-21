@@ -84,5 +84,8 @@ require('refactoring-setup')
 -- [[ Configure compiler ]]
 require('compiler-setup')
 
+-- [[ Leap compiler ]]
+require('leap-setup')
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
