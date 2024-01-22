@@ -31,6 +31,9 @@ vim.keymap.set('i', '<A-w>', '<C-o>w', { desc = 'Navigation forward word in inse
 vim.keymap.set('i', '<C-H>', '<C-w>', { desc = 'Ctrl + Backspace \"default\" behavior' })
 vim.keymap.set('i', '<C-z>', '<esc>ua', { desc = 'Undo wiht Ctrl + Z' })
 
+vim.keymap.set('v', 'p', 'P')
+-- vim.keymap.set('v', 'p', '"0p')
+
 vim.keymap.set({ 'x', 'n' }, '<leader>tu', ':Translate UK<cr>', { desc = 'Translate to Ukrainian' })
 vim.keymap.set({ 'x', 'n' }, '<leader>te', ':Translate EN<cr>', { desc = 'Translate to English' })
 
