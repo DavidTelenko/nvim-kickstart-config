@@ -29,6 +29,7 @@ vim.keymap.set('i', '<A-b>', '<C-o>b', { desc = 'Navigation back word in insert 
 vim.keymap.set('i', '<A-w>', '<C-o>w', { desc = 'Navigation forward word in insert mode' })
 
 vim.keymap.set('i', '<C-H>', '<C-w>', { desc = 'Ctrl + Backspace \"default\" behavior' })
+vim.keymap.set('i', '<C-Del>', '<C-o>dw', { desc = 'Ctrl + Del \"default\" behavior' })
 vim.keymap.set('i', '<C-z>', '<esc>ua', { desc = 'Undo wiht Ctrl + Z' })
 
 vim.keymap.set('v', 'p', 'P')
@@ -38,6 +39,9 @@ vim.keymap.set({ 'x', 'n' }, '<leader>tu', ':Translate UK<cr>', { desc = 'Transl
 vim.keymap.set({ 'x', 'n' }, '<leader>te', ':Translate EN<cr>', { desc = 'Translate to English' })
 
 vim.keymap.set('n', '<leader>o', ':luafile %<cr>', { desc = 'Source file' })
+
+-- How do i exit terminal in vim? --
+vim.keymap.set('t', '<C-q>', '<C-\\><C-n>', { desc = 'Exit terminal' })
 
 require('which-key').register({ ['<leader>t'] = "[T]ranslate" }, { mode = { 'x', 'n' } })
 -- vim: ts=2 sts=2 sw=2 et
