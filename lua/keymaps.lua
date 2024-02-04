@@ -28,8 +28,8 @@ vim.keymap.set('i', '<A-j>', '<C-o>gj', { desc = 'Navigation down in insert mode
 vim.keymap.set('i', '<A-b>', '<C-o>b', { desc = 'Navigation back word in insert mode' })
 vim.keymap.set('i', '<A-w>', '<C-o>w', { desc = 'Navigation forward word in insert mode' })
 
-vim.keymap.set('i', '<C-H>', '<C-w>', { desc = 'Ctrl + Backspace \"default\" behavior' })
-vim.keymap.set('i', '<C-Del>', '<C-o>dw', { desc = 'Ctrl + Del \"default\" behavior' })
+vim.keymap.set('i', '<C-H>', '<C-w>', { desc = 'Ctrl + Backspace "default" behavior' })
+vim.keymap.set('i', '<C-Del>', '<C-o>dw', { desc = 'Ctrl + Del "default" behavior' })
 vim.keymap.set('i', '<C-z>', '<esc>ua', { desc = 'Undo wiht Ctrl + Z' })
 
 vim.keymap.set('v', 'p', 'P')
